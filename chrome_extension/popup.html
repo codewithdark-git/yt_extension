@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <h1>YouTube Assistant</h1>
+            <div id="status-bar">
+                <div id="connection-status" class="status-indicator">
+                    <span class="dot"></span>
+                    <span id="status-text">Connecting...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section" id="sentiment-section">
+                <h2>Sentiment Analysis</h2>
+                <button id="fetch-sentiment" class="primary-button">
+                    <span class="button-text">Analyze Sentiment</span>
+                </button>
+                <div class="result-container">
+                    <div id="sentiment-result" class="result-box"></div>
+                    <img id="word-cloud-image" class="result-image" style="display: none; max-width: 100%; height: auto;">
+                </div>
+            </div>
+
+            <div class="section" id="blog-section">
+                <h2>Blog Post Generator</h2>
+                <div class="input-group">
+                    <select id="blog-tone" class="select-style">
+                        <option value="informative">Informative</option>
+                        <option value="casual">Casual</option>
+                        <option value="professional">Professional</option>
+                    </select>
+                    <select id="blog-length" class="select-style">
+                        <option value="short">Short</option>
+                        <option value="medium">Medium</option>
+                        <option value="long">Long</option>
+                    </select>
+                </div>
+                <button id="generate-blog" class="primary-button">
+                    <span class="button-text">Generate Blog Post</span>
+                </button>
+                <div class="result-container">
+                    <div id="blog-result" class="result-box"></div>
+                    <div id="blog-preview" class="preview-box markdown-preview"></div>
+                    <button id="copy-blog" class="secondary-button" style="display: none;">
+                        <span class="button-text">Copy Full Blog Post</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="section" id="qa-section">
+                <h2>Ask a Question</h2>
+                <div class="input-group">
+                    <input type="text" id="question-input" placeholder="Type your question about the video...">
+                    <button id="get-answer" class="primary-button">
+                        <span class="button-text">Get Answer</span>
+                    </button>
+                </div>
+                <div class="result-container">
+                    <div id="answer-result" class="result-box"></div>
+                    <div id="answer-preview" class="preview-box"></div>
+                    <button id="copy-answer" class="secondary-button" style="display: none;">
+                        <span class="button-text">Copy Full Answer</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

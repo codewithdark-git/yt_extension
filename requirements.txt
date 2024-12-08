@@ -1,0 +1,15 @@
+langchain
+langchain-groq
+sentence-transformers
+pytube
+youtube-transcript-api
+faiss-cpu
+python-dotenv
+fastapi
+uvicorn
+pydantic
+requests
+beautifulsoup4
+langchain-community
+wordcloud
+matplotlib
